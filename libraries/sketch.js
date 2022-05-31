@@ -8,7 +8,7 @@ function setup() {
   createCanvas(750, 1335);
   output = select('#output');
    //socket = io.connect('http://localhost:3000'); //서버컴퓨터의 주소와 포트를 적어주어야 하는데, 학교 서버는 일단 잘 안되네요!
-    socket = io.connect('https://203.252.219.43:3000');
+    socket = io.connect('http://203.252.219.43:3000');
 
   socket.on('message', function(data) {
     }
