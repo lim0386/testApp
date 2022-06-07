@@ -8,6 +8,20 @@
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
     <script src="libraries/p5.sound.js" type="text/javascript"></script>
     <script src="libraries/p5.speech.js"></script>
+    <script>
+      var AudioContext;
+var audioContext;
+
+window.onload = function() {
+    navigator.mediaDevices.getUserMedia({ audio: true }).then(() => {
+        AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioContext = new AudioContext();
+    }).catch(e => {
+        console.error(`Audio permissions denied: ${e}`);
+    });
+}
+// 출처: https://neos518.tistory.com/180 [As I've always been:티스토리]
+</script>
     <script src="sketch.js" type="text/javascript"></script>
 
     <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
