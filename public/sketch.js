@@ -28,9 +28,9 @@ function setup() {
     }
   }
 }
-function mousePressed() {
-  getAudioContext().resume();
-}
+// function mousePressed() {
+//   getAudioContext().resume();
+// }
 
 function sendText(textString) {
   var data = textString;
